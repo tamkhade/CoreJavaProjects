@@ -1,0 +1,39 @@
+//find min salary form workinghr table
+SELECT officername,min(workinghr) from employee;
+
+//find max salary from workinghr table
+SELECT officername,min(workinghr) from employee;
+
+//find avaerage salary from workinghr table
+SELECT avg(workinghr) from employee;
+
+//find sum of of all workinghr
+SELECT sum(workinghr) FROM employee ;
+
+//find count of working workinghr
+select count(workinghr) from employee;
+
+//find max salary from employee by group by descending order 
+SELECT officername,max(workinghr)FROM employee group by officername order by officername desc;
+
+//find min salary from employee by group by asc order 
+SELECT officername,min(workinghr)FROM employee group by officername order by officername asc;
+
+//find avg salary from employee by group by asc order 
+
+SELECT officername,avg(workinghr)FROM employee group by officername order by officername asc;
+
+//find sum salary from employee by group by asc order 
+SELECT officername,avg(workinghr)FROM employee group by officername order by officername asc;
+
+//find count salary from employee by group by asc order  ..display the proper counting of each employee 
+SELECT officername,count(workinghr)FROM employee group by officername order by officername asc;
+
+//find second highest working hr using emp table
+SELECT distinct(workinghr) from employee order by workinghr desc limit 1,1;
+
+//find employee name using like query
+SELECT officername from employee where address like='pune';
+
+//finding two table data
+SELECT employee.officernane,person.fname from employee join person on employee.officerid=person.id;
